@@ -88,7 +88,7 @@ header .btn
 }
 header .btn-success
 {
-	background-color: #34495e;
+	background-color: #1690A6;
 	border-color: transparent;
 	border-width: 0;
 	box-shadow: 0 -4px #33363b inset;	
@@ -104,7 +104,7 @@ header .btn-primary
 }
 header .btn-success:hover, header .btn-success:focus, header .btn-success:active
 {
-	background-color: #34495e;
+	background-color: #1690A6;
 	border-color: transparent;
 	border-width: 0;
 	box-shadow: none;	

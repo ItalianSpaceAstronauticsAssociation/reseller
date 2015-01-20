@@ -620,6 +620,8 @@ a.moderation_link, a.moderation_link:visited
 	background: #fff;
 	border-radius: 3px;
 	margin: 0.2em 1px 1em 1px;
+	font-family: SANS-SERIF;
+
 }
 .description_board
 {

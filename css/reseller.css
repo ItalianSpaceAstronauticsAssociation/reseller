@@ -91,32 +91,32 @@ header .btn-success
 	background-color: #1690A6;
 	border-color: transparent;
 	border-width: 0;
-	box-shadow: 0 -4px #33363b inset;	
-	text-shadow: 0 1px #33363b;
+/*	box-shadow: 0 -4px #33363b inset;	
+	text-shadow: 0 1px #33363b; */
 }
 header .btn-primary
 {
 	background-color: #34495e;
 	border-color: transparent;
 	border-width: 0;
-	box-shadow: 0 -4px #2c3e50 inset;	
-	text-shadow: 0 1px #2c3e50;
+/*	box-shadow: 0 -4px #2c3e50 inset;	
+	text-shadow: 0 1px #2c3e50;*/
 }
 header .btn-success:hover, header .btn-success:focus, header .btn-success:active
 {
 	background-color: #1690A6;
 	border-color: transparent;
 	border-width: 0;
-	box-shadow: none;	
-	padding-bottom: 13px;
+/*	box-shadow: none;	
+	padding-bottom: 13px;*/
 }
 header .btn-primary:hover, header .btn-primary:focus, header .btn-primary:active
 {
 	background-color: #34495e;
 	border-color: transparent;
 	border-width: 0;
-	box-shadow: none;	
-	padding-bottom: 13px;
+/*	box-shadow: none;	
+	padding-bottom: 13px;*/
 }
 header .modal-content
 {

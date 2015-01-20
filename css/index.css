@@ -509,11 +509,13 @@ div.pagesection div.floatright input
 .stickybg
 {
 	background: #fcf8e3 !important;
+	font-weight: 900;
+
 }
 .stickybg2
 {
 	background: #fcf8e3 !important;
-	font-weight: bold;
+	font-weight: 900;
 }
 
 /* Locked posts get a different shade, too! */

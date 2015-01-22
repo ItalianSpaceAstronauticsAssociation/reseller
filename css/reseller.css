@@ -258,3 +258,9 @@ footer span a.new_win:link, footer  span a.new_win:visited, footer span a:link, 
 .social_icons a:hover
 {
 	opacity: 1;
+}
+
+.wp-post-image 
+{
+	margin-right: 15px;
+}

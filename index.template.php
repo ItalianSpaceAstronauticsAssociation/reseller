@@ -228,9 +228,17 @@ function template_body_above()
 						<li class="user">', $context['user']['name'], '</li>
 						<li><a href="', $scripturl, '?action=profile">', $txt['profile'], '</a></li>
 						<li><a href="', $scripturl, '?action=unread;all;start=0">', 'Tutti i topic non letti', '</a></li>
-						<li><a href="', $scripturl, '?action=unreadreplies">', 'Risposte non lette', '</a></li>
+						<li><a href="', $scripturl, '?action=unreadreplies">', 'Risposte non lette', '</a></li>';
+						//marcozambi + mike (stats )
+$context['num_members'] = comma_format($modSettings['totalMembers']);
+$context['num_posts'] = comma_format($modSettings['totalMessages']);
+$context['num_topics'] = comma_format($modSettings['totalTopics']);
+echo '<li>' . $context['num_posts'] .' Post in ' . $context['num_topics'] . ' topics da ' . $context['num_members']    . ' utenti </li>';
 
-					</ul>';
+
+					echo '</ul>';
+
+
 			}
 			/*						<li><a href="', $scripturl, '?action=profile;area=forumprofile">', $txt['forumprofile'], '</a></li>
 <li><a href="', $scripturl, '?action=unread;all;start=0">', $txt['unread_topics_visit'], '</a></li>
@@ -272,8 +280,12 @@ function template_body_above()
 			echo'
 			</div>
 		</div>
-	</div>
-</header>';
+	</div>';
+
+
+
+echo '</header>';
+
 
 	// Show the navigation tree.
 	theme_linktree();

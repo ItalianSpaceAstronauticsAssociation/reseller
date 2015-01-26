@@ -24,14 +24,14 @@ ul, .nav {
 
 /* Navbar */
 .navbar-default
-{	border-color: #222427;
+{	border-color: #33363b;
 	border-bottom-width: 0;
-	background-color: #222427;
+	background-color: #33363b;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form
 {
 	border-bottom-width: 0;
-	border-color: #222427;
+	border-color: #33363b;
 	min-height: 50px;
 	vertical-align: center;
 }
@@ -65,9 +65,8 @@ ul, .nav {
 header
 {
 	background: #33363b;
-	box-shadow: 0 -3px #9fc6e0 inset;
 	padding: 20px 0; 
-	margin-top: 50px;
+	/*	margin-top: 35px;*/
 }
 @media (max-width: 970px) {
 	header

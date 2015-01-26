@@ -187,30 +187,7 @@ function template_body_above()
 
 
 	echo'
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="row">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand visible-xs" href="', $scripturl, '">', $context['forum_name'] ,'</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">';
-				
-					// Show the menu here, according to the menu sub template.
-					template_menu();
-					
-				echo'
-				</ul>
-			</div>
-		</div>
-	</div>
-</nav>
+<div style="background-color: black; height: 35px">Placeholder for omnibar</div>
 <header>
 	<div class="container">
 		<div class="row">
@@ -273,7 +250,31 @@ function template_body_above()
 			</div>
 		</div>
 	</div>
-</header>';
+</header>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand visible-xs" href="', $scripturl, '">', $context['forum_name'] ,'</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">';
+				
+					// Show the menu here, according to the menu sub template.
+					template_menu();
+					
+				echo'
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>';
 
 	// Show the navigation tree.
 	theme_linktree();

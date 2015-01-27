@@ -185,9 +185,8 @@ function template_body_above()
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 	echo $context['tapatalk_body_hook'];
 
-
+	include '/var/www/shared/omnibar/omnibar3.php';
 	echo'
-<div style="background-color: black; height: 35px">Placeholder for omnibar</div>
 <header>
 	<div class="container">
 		<div class="row">

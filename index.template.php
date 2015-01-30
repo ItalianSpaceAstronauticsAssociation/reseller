@@ -205,13 +205,6 @@ function template_body_above()
 						<li><a href="', $scripturl, '?action=profile">', $txt['profile'], '</a></li>
 						<li><a href="', $scripturl, '?action=unread;all;start=0">', 'Tutti i topic non letti', '</a></li>
 						<li><a href="', $scripturl, '?action=unreadreplies">', 'Risposte non lette', '</a></li>';
-						//marcozambi + mike (stats )
-$context['num_members'] = comma_format($modSettings['totalMembers']);
-$context['num_posts'] = comma_format($modSettings['totalMessages']);
-$context['num_topics'] = comma_format($modSettings['totalTopics']);
-echo '<li style="clear:both; margin-top:20px;">' . $context['num_posts'] .' Post in ' . $context['num_topics'] . ' topics da ' . $context['num_members']    . ' utenti </li>';
-
-
 					echo '</ul>';
 
 

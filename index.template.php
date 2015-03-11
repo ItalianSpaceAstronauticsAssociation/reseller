@@ -101,6 +101,9 @@ function template_html_above()
 
 	// Here comes the JavaScript bits!
 	echo '
+	// marco - start
+	<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	// marco - end
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">

@@ -209,7 +209,8 @@ footer span a.new_win:link, footer  span a.new_win:visited, footer span a:link, 
 }
 .btn-group
 {
-	margin: 5px 0;
+	margin-bottom: 5px;
+	float: right;
 }
 .display-info
 {

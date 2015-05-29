@@ -3751,38 +3751,3 @@ span.hidelink
 	}
 }
 
-
-.cookie_wrap
-{
-	position: fixed;
-	width: 100%;
-	bottom: 20px;
-	text-align: center;
-	z-index: 9999;
-}
-.cookie_wrap a:link, .cookie_wrap a:visited
-{
-	text-decoration: none;
-}
-.cookie_wrap a:hover
-{
-	text-decoration: underline;
-	cursor: pointer;
-}
-.cookie_notice
-{
-	display: inline-block;
-	margin: 0 auto;
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 12px;
-}
-#cookie_button
-{
-	background: #346;
-	color: #fff;
-	font: bold 11px arial;
-	padding: 3px 12px;
-	border-radius: 3px;
-}
-

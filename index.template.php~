@@ -101,6 +101,9 @@ function template_html_above()
 
 	// Here comes the JavaScript bits!
 	echo '
+	<!-- MathJax - start -->
+	<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<!-- MathJax - end -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">
@@ -183,32 +186,10 @@ function template_html_above()
 function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
+	echo $context['tapatalk_body_hook'];
 
+	include '/var/www/shared/omnibar/omnibar3.php';
 	echo'
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="row">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand visible-xs" href="', $scripturl, '">', $context['forum_name'] ,'</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">';
-				
-					// Show the menu here, according to the menu sub template.
-					template_menu();
-					
-				echo'
-				</ul>
-			</div>
-		</div>
-	</div>
-</nav>
 <header>
 	<div class="container">
 		<div class="row">
@@ -226,9 +207,10 @@ function template_body_above()
 						<li class="user">', $context['user']['name'], '</li>
 						<li><a href="', $scripturl, '?action=profile">', $txt['profile'], '</a></li>
 						<li><a href="', $scripturl, '?action=unread;all;start=0">', 'Tutti i topic non letti', '</a></li>
-						<li><a href="', $scripturl, '?action=unreadreplies">', 'Risposte non lette', '</a></li>
+						<li><a href="', $scripturl, '?action=unreadreplies">', 'Risposte non lette', '</a></li>';
+					echo '</ul>';
 
-					</ul>';
+
 			}
 			/*						<li><a href="', $scripturl, '?action=profile;area=forumprofile">', $txt['forumprofile'], '</a></li>
 <li><a href="', $scripturl, '?action=unread;all;start=0">', $txt['unread_topics_visit'], '</a></li>
@@ -269,9 +251,33 @@ function template_body_above()
 			}
 			echo'
 			</div>
+		</div>';
+echo'	</div>
+</header>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand visible-xs" href="', $scripturl, '">', $context['forum_name'] ,'</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">';
+				
+					// Show the menu here, according to the menu sub template.
+					template_menu();
+					
+				echo'
+				</ul>
+			</div>
 		</div>
 	</div>
-</header>';
+</nav>';
 
 	// Show the navigation tree.
 	theme_linktree();
@@ -424,7 +430,12 @@ function template_menu()
 		if (!empty($button['sub_buttons']))
 		{
 			echo '
-					<ul class="dropdown-menu" role="menu">';
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="', $button['href'], '"', isset($button['target']) ? ' target="' . $button['target'] . '"' : '', '>
+								', $button['title'] , '
+							</a>
+						</li>';
 
 			foreach ($button['sub_buttons'] as $childbutton)
 			{

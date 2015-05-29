@@ -347,6 +347,19 @@ function template_html_below()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
+	// EU Cookie mod
+	global $user_info;
+	if (!$user_info['is_admin'] && !empty($modSettings['enable_eucookie']))
+		echo '
+	<div class="cookie_wrap">
+		<div class="cookie_notice" style="' . ($modSettings['eucookie_color'] == 'black' ? 'background: #000; background-color: rgba(0,0,0,0.80); color: #fff;' : 'background: #fff; background-color: rgba(255,255,255,0.80); color: #000;') . '">
+			', !empty($modSettings['eucookie_notice']) ? $modSettings['eucookie_notice'] : $txt['eucookie_text'], '
+			<button id="cookie_button" type="button">OK</button>
+			' . (!empty($modSettings['eucookie_policy']) ?  '<a style="' . ($modSettings['eucookie_color'] == 'black' ? 'color: #fff;' : 'color: #000;') . '" href="' . $modSettings['eucookie_policy'] . '">' . $txt['eucookie_more'] . '</a>' : '') . '
+		</div>
+	</div>';
+
+
 	echo '
 </body></html>';
 }

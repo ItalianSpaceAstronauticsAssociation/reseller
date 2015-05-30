@@ -3759,6 +3759,7 @@ span.hidelink
 	bottom: 20px;
 	text-align: center;
 	z-index: 9999;
+	visibility: hidden;
 }
 .cookie_wrap a:link, .cookie_wrap a:visited
 {
